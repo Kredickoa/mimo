@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pl"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Mimo — mała lampa, która rozświetla twój świat."><title>Mimo</title><link rel="icon" href="./favicon.svg?v=2"></head>
+<body>
+<main class="scroll-story" id="top">
+  <div id="details" class="details-marker" aria-hidden="true"></div>
+  <div id="lamps" class="lamps-marker" aria-hidden="true"></div>
+  <div class="stage">
+    <img class="landscape" src="./misty-forest.png" alt="" fetchpriority="high">
+    <header class="site-header">
+      <button class="brand" type="button" data-scroll="top" aria-label="Mimo — początek">mimo<span class="brand-dot" aria-hidden="true">✳</span></button>
+      <nav aria-label="Nawigacja"><button class="nav-pill active" type="button" data-scroll="top"><img src="./icons/layout-grid.svg" alt="">Sklep</button><button class="nav-pill" type="button" data-scroll="lamps">Lampy</button><button class="nav-pill" type="button" data-dialog="about-dialog">O nas</button><button class="nav-pill" type="button" data-scroll="details">Detale</button></nav>
+      <div class="header-actions">
+        <div class="social-links" aria-label="Profile społecznościowe"><button class="icon-button" type="button" disabled aria-label="Instagram — wkrótce" title="Instagram — wkrótce"><img src="./icons/brand-instagram.svg" alt=""></button><button class="icon-button" type="button" disabled aria-label="Threads — wkrótce" title="Threads — wkrótce"><img src="./icons/brand-threads.svg" alt=""></button><button class="icon-button" type="button" disabled aria-label="X — wkrótce" title="X — wkrótce"><img src="./icons/brand-x.svg" alt=""></button></div>
+        <button class="icon-button light-button" id="site-light" type="button" aria-label="Wyłącz światło" title="Wyłącz światło" aria-pressed="true"><img src="./icons/moon.svg" alt=""></button>
+        <button class="icon-button cart-button" type="button" data-dialog="cart-dialog" aria-label="Koszyk" title="Koszyk"><img src="./icons/shopping-cart.svg" alt=""></button>
+      </div>
+    </header>
+    <h1 class="hero-title" aria-label="Światło z bajki.">Światło z bajki.</h1>
+    <canvas id="lamp-canvas" aria-hidden="true"></canvas>
+    <img id="scene-fallback" src="./reference.png" alt="Lampa Mimo" hidden>
+    <p class="model-status" id="model-status" role="status">Ładowanie Mimo…</p>
+    <div class="features" aria-label="Detale lampy">
+      <div class="feature feature-one"><span>Wiśniowy klosz</span><span class="feature-icon"><img src="./icons/palette.svg" alt=""></span></div>
+      <div class="feature feature-two"><span class="feature-icon"><img src="./icons/bulb.svg" alt=""></span><span>Ciepły, miękki blask</span></div>
+      <div class="feature feature-three"><span>Wypukłe detale</span><span class="feature-icon"><img src="./icons/stack-2.svg" alt=""></span></div>
+      <div class="feature feature-four"><span class="feature-icon"><img src="./icons/sparkles.svg" alt=""></span><span>Odrobina magii</span></div>
+    </div>
+    <h2 class="details-title">Poczuj ten klimat.</h2>
+    <div class="hero-bottom"><span>Małe światło. Cały twój świat.</span><button type="button" data-scroll="details">Przewiń i odkryj Mimo</button><button type="button" data-scroll="lamps">Poznaj lampę</button></div>
+    <div class="detail-bottom"><button type="button" data-scroll="top">Od początku</button><button type="button" data-scroll="lamps">Poznaj lampę</button></div>
+  </div>
+</main>
+<dialog id="about-dialog"><button class="dialog-close icon-button" type="button" data-close aria-label="Zamknij"><img src="./icons/x.svg" alt=""></button><h2>mimo<span aria-hidden="true">✳</span></h2><p>Małe przedmioty potrafią zmienić cały nastrój. Mimo łączy miękką formę, odrobinę zabawy i światło, przy którym chce się zostać.</p><button class="dialog-action" type="button" data-close>Poznaj Mimo</button></dialog>
+<dialog id="cart-dialog"><button class="dialog-close icon-button" type="button" data-close aria-label="Zamknij"><img src="./icons/x.svg" alt=""></button><h2>Twój koszyk</h2><p>Koszyk jest jeszcze pusty.</p><button class="dialog-action" type="button" data-scroll="lamps" data-close>Poznaj lampę</button></dialog>
+<script type="module" src="./src/main.js"></script>
+</body></html>

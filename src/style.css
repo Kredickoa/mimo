@@ -1,0 +1,52 @@
+@import './base.css';
+:root {font-family:Arial,sans-serif;color:#fff;background:#345346}
+html {scroll-behavior:smooth}
+body {margin:0}
+.scroll-story {height:380vh;position:relative}
+.details-marker {position:absolute;top:135vh;width:1px;height:1px}
+.lamps-marker {position:absolute;top:70vh;width:1px;height:1px}
+.stage {position:sticky;top:0;height:100vh;overflow:hidden;isolation:isolate}
+.landscape {position:absolute;inset:0;width:100%;height:125%;object-fit:cover;object-position:center;z-index:-2;will-change:transform,filter}
+.stage::before {content:'';position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(180deg,#08181559 0%,#08181529 25%,transparent 52%)}
+.site-header {position:absolute;top:0;left:0;right:0;padding:30px 3vw;display:flex;align-items:center;justify-content:space-between;z-index:10}
+.brand {border:0;padding:0;background:transparent;color:inherit;display:inline-flex;align-items:center;gap:5px;font:620 36px/.9 'Fredoka Variable',sans-serif;letter-spacing:-.05em;text-decoration:none}
+.brand-dot {font-weight:400;font-size:30px;margin-top:-6px}
+.site-header nav {position:absolute;left:50%;transform:translateX(-50%);display:flex;gap:7px}
+.nav-pill {display:inline-flex;align-items:center;gap:9px;border:1px solid transparent;color:#fff;background:#204b5c55;border-radius:14px;padding:15px 19px;text-decoration:none;font:600 12px Arial,sans-serif;backdrop-filter:blur(12px)}
+.nav-pill.active {background:#060e10;border-color:#ffffff8c}
+.nav-pill:hover {background:#071d28}
+.nav-pill img,.icon-button img {width:18px;height:18px;filter:brightness(0) invert(1)}
+.header-actions {display:flex;align-items:center;gap:8px}
+.social-links {display:flex;align-items:center;border-radius:14px;padding:2px 5px;background:#204b5c44;backdrop-filter:blur(12px)}
+.icon-button {display:grid;place-items:center;width:40px;height:44px;padding:0;border:0;color:#fff;background:transparent;border-radius:12px}
+.social-links .icon-button:disabled {opacity:1;cursor:default}
+.light-button {background:#204b5c55;backdrop-filter:blur(12px)}
+.cart-button {width:48px;height:48px;background:#060e10;border:1px solid #ffffff8c;border-radius:14px}
+.light-button:hover,.cart-button:hover {background:#071d28}
+.hero-title {position:absolute;top:15vh;left:0;right:0;margin:0;text-align:center;font:900 clamp(70px,9.2vw,156px)/1 'Arial Black',Arial,sans-serif;letter-spacing:-.07em;z-index:2;white-space:nowrap}
+.hero-title span {display:inline-block;white-space:pre;will-change:transform,opacity;transform-origin:center}
+#lamp-canvas {position:absolute;inset:0;width:100%;height:100%;z-index:3;pointer-events:none}
+#scene-fallback {position:absolute;left:50%;top:34%;transform:translateX(-50%);height:49%;border-radius:35px}
+.model-status {position:absolute;bottom:8vh;width:100%;text-align:center;z-index:9;font:12px Arial}
+.model-status[hidden] {display:none}
+.features {position:absolute;inset:0;z-index:4;opacity:0;pointer-events:none}
+.feature {position:absolute;display:flex;align-items:center;gap:8px;white-space:nowrap}
+.feature > span:not(.feature-icon) {padding:20px 22px;border-radius:18px;background:#31576344;backdrop-filter:blur(14px);font:600 13px/1 Arial,sans-serif}
+.feature-icon {display:grid;place-items:center;width:57px;height:57px;background:#061011;border:1px solid #ffffff70;border-radius:16px}
+.feature-icon img {width:26px;height:26px;filter:brightness(0) invert(1)}
+.feature-one {left:9vw;top:34vh}
+.feature-two {right:9vw;top:31vh}
+.feature-three {left:10vw;top:62vh}
+.feature-four {right:10vw;top:65vh}
+.details-title {position:absolute;left:0;right:0;top:75vh;margin:0;text-align:center;z-index:4;font:900 clamp(55px,6.5vw,112px)/.86 'Arial Black',Arial,sans-serif;letter-spacing:-.065em;opacity:0}
+.details-title br {display:none}
+.hero-bottom,.detail-bottom {position:absolute;left:3vw;right:3vw;bottom:28px;z-index:5;display:flex;justify-content:space-between;align-items:center;font:11px Arial,sans-serif}
+.hero-bottom [data-scroll],.detail-bottom [data-scroll] {border:0;padding:0;background:transparent;color:inherit;font:inherit;text-decoration:underline;text-underline-offset:5px}
+.detail-bottom {opacity:0;pointer-events:none}
+dialog {color:#fff;background:#12313beb;border:1px solid #ffffff45;border-radius:24px;padding:42px;max-width:430px;box-shadow:0 25px 90px #0005;backdrop-filter:blur(20px)}
+dialog::backdrop {background:#06182066;backdrop-filter:blur(6px)}
+dialog h2 {margin:0 0 20px;font:600 36px 'Fredoka Variable',sans-serif}
+dialog p {font:14px/1.7 Arial,sans-serif;margin:0 0 25px;opacity:.85}
+.dialog-close {position:absolute;top:9px;right:9px}
+.dialog-action {display:inline-block;padding:12px 18px;color:#173741;background:#fff;border:0;border-radius:12px;text-decoration:none;font:600 12px Arial,sans-serif}
+@media (prefers-reduced-motion:reduce) {html{scroll-behavior:auto}}

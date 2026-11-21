@@ -2,9 +2,9 @@
 
 An atmospheric product website for a mushroom-shaped lamp. Built as a frontend portfolio project to explore product presentation, motion and visual storytelling.
 
-[![Watch the demo](demo/preview.jpg)](https://github.com/Kredickoa/mimo-2/raw/refs/heads/main/demo/demo.mp4)
+## Demo
 
-[Watch the demo video](https://github.com/Kredickoa/mimo-2/raw/refs/heads/main/demo/demo.mp4)
+https://github.com/user-attachments/assets/55ade91b-e3fd-4a52-bc50-a876bda32357
 
 ## Highlights
 
